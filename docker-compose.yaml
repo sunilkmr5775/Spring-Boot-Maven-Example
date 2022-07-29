@@ -1,13 +1,13 @@
 version: "2.1"
 services:
-  server:
-    image: jetbrains/teamcity-server:${TEAMCITY_VERSION}
-    ports:
-      - "8112:8111"
-    volumes:
-      - ./teamcity-server/data:D:/ProgramData/JetBrains/TeamCity
-      - ./teamcity-server/logs:D:/TeamCity/logs
-    mem_limit: 2g
+ # server:
+ #   image: jetbrains/teamcity-server:${TEAMCITY_VERSION}
+ #   ports:
+ #     - "8112:8111"
+ #   volumes:
+ #     - ./teamcity-server/data:D:/ProgramData/JetBrains/TeamCity
+ #     - ./teamcity-server/logs:D:/TeamCity/logs
+ #   mem_limit: 2g
   agent:
     image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}
     environment:
